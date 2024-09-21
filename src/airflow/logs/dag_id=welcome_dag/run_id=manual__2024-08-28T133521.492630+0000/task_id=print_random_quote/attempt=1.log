@@ -1,0 +1,17 @@
+[2024-08-28T13:35:29.829+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.print_random_quote manual__2024-08-28T13:35:21.492630+00:00 [queued]>
+[2024-08-28T13:35:29.837+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.print_random_quote manual__2024-08-28T13:35:21.492630+00:00 [queued]>
+[2024-08-28T13:35:29.838+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-08-28T13:35:29.851+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): print_random_quote> on 2024-08-28 13:35:21.492630+00:00
+[2024-08-28T13:35:29.858+0000] {standard_task_runner.py:60} INFO - Started process 141 to run task
+[2024-08-28T13:35:29.860+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'welcome_dag', 'print_random_quote', 'manual__2024-08-28T13:35:21.492630+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmpsfmipfdd']
+[2024-08-28T13:35:29.863+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask print_random_quote
+[2024-08-28T13:35:29.912+0000] {task_command.py:423} INFO - Running <TaskInstance: welcome_dag.print_random_quote manual__2024-08-28T13:35:21.492630+00:00 [running]> on host 806dd18644e1
+[2024-08-28T13:35:29.984+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='print_random_quote' AIRFLOW_CTX_EXECUTION_DATE='2024-08-28T13:35:21.492630+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-28T13:35:21.492630+00:00'
+[2024-08-28T13:35:30.812+0000] {logging_mixin.py:188} INFO - Attempt 1 failed: HTTPSConnectionPool(host='api.quotable.io', port=443): Max retries exceeded with url: /random (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd6039f08e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-08-28T13:35:36.402+0000] {logging_mixin.py:188} INFO - Attempt 2 failed: HTTPSConnectionPool(host='api.quotable.io', port=443): Max retries exceeded with url: /random (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd6039f0a30>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-08-28T13:35:42.593+0000] {logging_mixin.py:188} INFO - Attempt 3 failed: HTTPSConnectionPool(host='api.quotable.io', port=443): Max retries exceeded with url: /random (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd6039f0a90>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-08-28T13:35:42.593+0000] {logging_mixin.py:188} INFO - Failed to retrieve the quote after multiple attempts.
+[2024-08-28T13:35:42.594+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-08-28T13:35:42.604+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=welcome_dag, task_id=print_random_quote, execution_date=20240828T133521, start_date=20240828T133529, end_date=20240828T133542
+[2024-08-28T13:35:42.633+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-08-28T13:35:42.647+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

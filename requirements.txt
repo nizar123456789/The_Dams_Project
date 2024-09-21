@@ -1,0 +1,4 @@
+pandas 
+requests 
+tabula-py
+apache-airflow
